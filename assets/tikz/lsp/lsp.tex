@@ -1,0 +1,72 @@
+\documentclass{standalone}
+
+\usepackage{tikz}
+\usetikzlibrary{calc}
+\usetikzlibrary{positioning}
+
+\usepackage{svg}
+
+\newcommand{\vdistance}{2.5cm}
+\newcommand{\hdistance}{8cm}
+\newcommand{\iconSize}{2cm}
+\newcommand{\iconMargin}{0.1cm}
+
+\newcommand{\initialNodes}{
+  \coordinate (editor 0) at (0, 0);
+  \coordinate [right=\hdistance of editor 0] (server 0);
+}
+
+\newcommand{\NEditors}{3}
+\newcommand{\addEditorAndServer}{
+  % \x conflicts with let https://tex.stackexchange.com/questions/25215/combining-tikz-foreach-and-let-operation
+  \foreach \a in {1,...,\NEditors} {
+    \path
+      let \n1 = {int(\a - 1)} in
+        coordinate [below=\vdistance of editor \n1] (editor \a)
+        coordinate [below=\vdistance of server \n1] (server \a);
+  }
+}
+
+\newcommand{\shortenLength}{0pt}
+\newcommand{\drawLines}{
+  \foreach \a in {1,...,\NEditors}
+    \foreach \b in {1,...,\NEditors}
+      \draw [thick, shorten <=\shortenLength, shorten >=\shortenLength] (editor \a) -- (server \b);
+}
+
+\newcommand{\drawLanguageServer}{
+  \path node [draw, thick] (LSP) at ($ (editor 1)!.5!(server \NEditors) $) {\large\textsf{Language Server Protocol}};
+  \foreach \a in {1,...,\NEditors} {
+    \begin{scope}[thick, shorten <=\shortenLength, shorten >=\shortenLength]
+      \draw (editor \a) -- (LSP.west);
+      \draw (server \a) -- (LSP.east);
+    \end{scope}
+  }
+}
+
+\newcommand{\drawEditors}{
+  \node [left=\iconMargin of editor 1] (vim) {\includesvg[width=\iconSize]{logo/Vimlogo.svg}};
+  \node [left=\iconMargin of editor 2] (emacs) {\includesvg[width=\iconSize]{logo/EmacsIcon.svg}};
+  \node [left=\iconMargin of editor 3] (vscode) {\includesvg[width=\iconSize]{logo/vscode.svg}};
+}
+
+\newcommand{\drawLanguages}{
+  \node [right=\iconMargin of server 1] (lua) {\includesvg[width=\iconSize]{logo/Lua-Logo.svg}};
+  \node [right=\iconMargin of server 2] (typescript) {\includesvg[width=\iconSize]{logo/ts-logo-256.svg}};
+  \node [right=\iconMargin of server 3] (rust) {\includesvg[width=\iconSize]{logo/rust-logo-blk.svg}};
+}
+
+\begin{document}
+
+\begin{tikzpicture}
+  \initialNodes
+  \addEditorAndServer
+
+  % \drawLines
+  \drawLanguageServer
+
+  \drawEditors
+  \drawLanguages
+\end{tikzpicture}
+
+\end{document}
