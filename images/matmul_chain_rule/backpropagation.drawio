@@ -1,0 +1,55 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36" version="28.2.6">
+  <diagram name="ページ1" id="EsoTeG0hK75gWAsMVtfE">
+    <mxGraphModel dx="673" dy="481" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="1" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="Lp1s1zboHpbo5JRT3McI-1" value="`f`" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fontSize=18;" vertex="1" parent="1">
+          <mxGeometry x="370" y="320" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="Lp1s1zboHpbo5JRT3McI-2" value="" style="endArrow=classic;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" target="Lp1s1zboHpbo5JRT3McI-1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="140" y="360" as="sourcePoint" />
+            <mxPoint x="440" y="340" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Lp1s1zboHpbo5JRT3McI-3" value="" style="endArrow=classic;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="450" y="360" as="sourcePoint" />
+            <mxPoint x="680" y="360" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Lp1s1zboHpbo5JRT3McI-4" value="`x`" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontSize=18;" vertex="1" parent="1">
+          <mxGeometry x="230" y="310" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="Lp1s1zboHpbo5JRT3McI-5" value="`z`" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontFamily=Helvetica;fontSize=18;fontColor=default;" vertex="1" parent="1">
+          <mxGeometry x="540" y="310" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="Lp1s1zboHpbo5JRT3McI-6" value="`\frac{\partial \mathcal{L}}{\partial z}`" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontFamily=Helvetica;fontSize=18;fontColor=default;" vertex="1" parent="1">
+          <mxGeometry x="540" y="380" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="Lp1s1zboHpbo5JRT3McI-8" value="`\frac{\partial \mathcal{L}}{\partial x}`" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontFamily=Helvetica;fontSize=18;fontColor=default;" vertex="1" parent="1">
+          <mxGeometry x="230" y="380" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="Lp1s1zboHpbo5JRT3McI-10" value="" style="endArrow=classic;html=1;rounded=0;fontFamily=Helvetica;fontSize=18;fontColor=default;shape=flexArrow;strokeWidth=1;strokeColor=default;startSize=6;endSize=6;width=5.833333333333334;endWidth=9.126984126984125;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="300" y="303" as="sourcePoint" />
+            <mxPoint x="520" y="303" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Lp1s1zboHpbo5JRT3McI-13" value="順伝搬 (forward pass)" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontFamily=Helvetica;fontSize=18;fontColor=default;" vertex="1" parent="1">
+          <mxGeometry x="380" y="270" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="Lp1s1zboHpbo5JRT3McI-14" value="" style="endArrow=classic;html=1;rounded=0;fontFamily=Helvetica;fontSize=18;fontColor=default;shape=flexArrow;strokeWidth=1;strokeColor=default;startSize=6;endSize=6;width=5.833333333333334;endWidth=9.126984126984125;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="520" y="421" as="sourcePoint" />
+            <mxPoint x="300" y="421" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Lp1s1zboHpbo5JRT3McI-15" value="誤差逆伝搬 (backpropagation)" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontFamily=Helvetica;fontSize=18;fontColor=default;" vertex="1" parent="1">
+          <mxGeometry x="381" y="428" width="60" height="30" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
